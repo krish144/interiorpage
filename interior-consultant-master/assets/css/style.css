@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+:root{ 
+    --background:#181719;
+    --color:#FFFFFF;
+    --footer:#A9A9A9;
+
+}
+
+body{
+    background-color: var(--background);
+    color: var(--color); 
+    overflow-x: hidden;
+}
+
+#navbar ,#closebar{
+    display: none;
+}
+header{
+    margin: 3%;
+    position: relative;
+    
+}
+
+#head{
+    padding: 8px;
+    border: 1px solid var(--color);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 200;
+    font-family: 'Crimson Pro', serif;
+}
+
+nav ul{
+    margin-top: 0;
+    margin-left: 0%;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    position: absolute;
+    top:0%;
+    right:0%;
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+nav ul li::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color);
+    display: block;
+    margin: auto;
+    border-radius: 20%;
+    transition: 0.6s;
+}
+
+nav ul li:hover:after{
+    width: 100%;
+    font-weight: 800;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--color);
+    font-family: 'Montserrat', sans-serif;
+    font-weight:500;
+    font-size: 20px;
+}
+
+.content{
+    display: flex;
+    padding: 20px;
+    margin-top: 7%;
+}
+
+.left{
+     width: 350px;
+     height: 400px;
+     margin-right: 10%;
+     margin-top: 6%;
+
+}
+
+.left h1{
+    font-family:'Lora', serif;
+    font-weight: 400;
+    font-size: 45px;
+}
+
+.about{
+    width: 350px;
+    height: 200px;
+    font-size: 26px;
+    font-weight: 200;
+    line-height: 31px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 10%;
+}
+
+.left a{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: var(--color);
+    padding: 10px;
+}
+
+
+.right{
+    width:100%;
+    height: 600px;
+    position: relative;
+}
+
+.banner{
+    width: 100%;
+    height: 100%;  
+    object-fit: 100%;
+}
+
+.designer{
+    position: absolute;
+    right: 9%;
+    top:89%;
+    width: 300px;
+    height: 100px;
+    color: var(--color);
+    background-color: var(--background);
+    box-shadow: 1px 4px 5px 1px black;
+    padding: 29px;
+    padding-bottom: 50px;
+    padding-right: 100px;
+}
+
+.designer .person{
+   
+    border-radius: 50%;
+    float: left;
+    margin-right:10%;
+    margin-top: 0%;
+}
+
+.designer #name{
+   font-family: 'Montserrat', sans-serif;
+   margin-top: 2%;
+}
+
+.designer #name span{
+    font-size: 10px;
+    font-weight: 100;
+}
+
+.designer #msg{
+    font-family: 'Lora', serif;
+    font-style: normal ;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 30px;
+
+}
+
+footer{
+    text-align: center;
+    margin-top: 17%;
+    color: var(--footer);
+}
+
+@media all and (max-width:2561px){
+    body{
+        overflow-x: hidden;
+    }
+    .banner{
+        object-fit: cover;
+    }
+}
+
+@media all and (max-width:1000px){
+    body{
+       overflow-x: hidden;
+    }
+    nav ul {
+          display: block;
+          position: absolute;
+          left: 20%;
+    }
+    nav ul li{
+        padding: 20px;
+        text-align: center;
+    }
+    nav{
+        left: -200%;
+        position: absolute;
+        background-color: var(--background);
+        width: 100vw;
+        height: 110vh;
+        top:200%;
+        z-index: 2;
+    }
+
+
+    #navbar{
+        display: inline;
+        position: absolute;
+        right: 0%;
+        top: 0%;
+        margin: 0%;
+        cursor: pointer;
+    } 
+    #closebar{
+        display: none;
+        position: absolute;
+        right: 0%;
+        top: 0%;
+        margin: 0%;
+        cursor: pointer;
+    }
+    nav ul li:hover:after{
+        width: 20%;
+        font-weight: 800;
+    }
+    .content{
+        flex-direction: column;
+    }
+   .right{
+     width: 95%;
+     }
+}
+
+@media screen and (max-width:650px){
+    body{
+        overflow-x: hidden;
+        width: fit-content;
+    }
+    .content{
+        width: 100%;
+    }
+    .left{
+        width: 90%;
+        height: 100;
+        margin-bottom: 10%;
+    }
+    .about{
+        margin: 2%;
+        width: 90%;
+        font-size: 19px;
+    }
+    .right{
+       width:100%;
+       height: 100%;
+       margin-bottom: 5%;
+    }
+    nav ul{
+        left: 0%;
+    }
+    nav{
+        width: 100vw;
+        height: 100vh;
+    }
+    .designer{
+      width: 48%;
+      height: 25%;
+      right: 4%;
+      top:80%;
+    }
+    .designer #msg{
+        font-size: 16px;
+        line-height: 100%;
+    }
+    .right{
+        width: 90%;
+
+    }
+    .banner{
+        width: 100%;
+        height: 100%;
+    }
+    .person{
+        margin-top: 0%;
+    }
+    #name{
+        margin-top: 0%;
+    }
+}
